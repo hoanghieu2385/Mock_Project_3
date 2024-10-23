@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Hoang Hieu\Documents\Code learn\Hoc_Ky_3\SEM3-4.-ASP.Net-Core\Mock_Project_3\MockWeb\MockWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Hoang Hieu/Documents/Code learn/Hoc_Ky_3/SEM3-4.-ASP.Net-Core/Mock_Project_3/MockWeb/MockWeb/Areas/Admin/Views/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Hoang Hieu/Documents/Code learn/Hoc_Ky_3/SEM3-4.-ASP.Net-Core/Mock_Project_3/MockWeb/MockWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

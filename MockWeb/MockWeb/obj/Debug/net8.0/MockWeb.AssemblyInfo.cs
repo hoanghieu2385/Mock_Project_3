@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MockWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d58f4eb6dd1e10742d08121d32537727574553f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d4328e37183de417f871fe32324b5c10be9d8a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("MockWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MockWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
