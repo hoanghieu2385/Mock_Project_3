@@ -8,18 +8,20 @@ namespace BestStoreMVC.Models
         public int Id { get; set; }
 
         [MaxLength(100)]
-        public string Name { get; set; } = "";
+        public string Title { get; set; } = "";
 
         [MaxLength(100)]
-        public string Brand { get; set; } = "";
+        public string Author { get; set; } = "";
 
-        [MaxLength(100)]
-        public string Category { get; set; } = "";
+        public string Description { get; set; } = "";
+
+        public string ISBN { get; set; } = "";
 
         [Precision(16, 2)]
         public decimal Price { get; set; }
 
-        public string Description { get; set; } = "";
+        [MaxLength(100)]
+        public string Category { get; set; } = "";
 
         [MaxLength(100)]
         public string ImageFileName { get; set; } = "";

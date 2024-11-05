@@ -26,11 +26,11 @@ namespace BestStoreMVC.Controllers
             // search functionality
             if (search != null)
             {
-                query = query.Where(p => p.Name.Contains(search) || p.Brand.Contains(search));
+                query = query.Where(p => p.Title.Contains(search) || p.Author.Contains(search));
             }
 
             // sort functionality
-            string[] validColumns = { "Id", "Name", "Brand", "Category", "Price", "CreatedAt" };
+            string[] validColumns = { "Id", "Title", "Author", "Category", "Price", "CreatedAt" };
             string[] validOrderBy = { "desc", "asc" };
 
             if (!validColumns.Contains(column))
@@ -43,26 +43,26 @@ namespace BestStoreMVC.Controllers
                 orderBy = "desc";
             }
 
-            if (column == "Name")
+            if (column == "Title")
             {
                 if (orderBy == "asc")
                 {
-                    query = query.OrderBy(p => p.Name);
+                    query = query.OrderBy(p => p.Title);
                 }
                 else
                 {
-                    query = query.OrderByDescending(p => p.Name);
+                    query = query.OrderByDescending(p => p.Title);
                 }
             }
-            else if (column == "Brand")
+            else if (column == "Author")
             {
                 if (orderBy == "asc")
                 {
-                    query = query.OrderBy(p => p.Brand);
+                    query = query.OrderBy(p => p.Author);
                 }
                 else
                 {
-                    query = query.OrderByDescending(p => p.Brand);
+                    query = query.OrderByDescending(p => p.Author);
                 }
             }
             else if (column == "Category")
@@ -168,11 +168,12 @@ namespace BestStoreMVC.Controllers
             // save the new product in the database
             Product product = new Product()
             {
-                Name = productDto.Name,
-                Brand = productDto.Brand,
-                Category = productDto.Category,
-                Price = productDto.Price,
+                Title = productDto.Title,
+                Author = productDto.Author,
                 Description = productDto.Description,
+                ISBN = productDto.ISBN,
+                Price = productDto.Price,
+                Category = productDto.Category,
                 ImageFileName = newFileName,
                 CreatedAt = DateTime.Now,
             };
@@ -197,17 +198,18 @@ namespace BestStoreMVC.Controllers
             // create productDto from product
             var productDto = new ProductDto()
             {
-                Name = product.Name,
-                Brand = product.Brand,
-                Category = product.Category,
-                Price = product.Price,
+                Title = product.Title,
+                Author = product.Author,
                 Description = product.Description,
+                ISBN = product.ISBN,
+                Price = product.Price,
+                Category = product.Category
             };
 
 
             ViewData["ProductId"] = product.Id;
             ViewData["ImageFileName"] = product.ImageFileName;
-            ViewData["CreatedAt"] = product.CreatedAt.ToString("MM/dd/yyyy");
+            ViewData["CreatedAt"] = product.CreatedAt.ToString("dd/MM/yyyy");
 
             return View(productDto);
         }
@@ -254,11 +256,12 @@ namespace BestStoreMVC.Controllers
 
 
             // update the product in the database
-            product.Name = productDto.Name;
-            product.Brand = productDto.Brand;
-            product.Category = productDto.Category;
-            product.Price = productDto.Price;
+            product.Title = productDto.Title;
+            product.Author = productDto.Author;
             product.Description = productDto.Description;
+            product.ISBN = productDto.ISBN;
+            product.Price = productDto.Price;
+            product.Category = productDto.Category;
             product.ImageFileName = newFileName;
 
 
