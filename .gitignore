@@ -3,10 +3,6 @@
 ################################################################################
 
 /.vs
-/MockWeb/.vs/MockWeb
-/MockWeb/.vs/ProjectEvaluation
-/MockWeb/MockWeb/obj
-/MockWeb/MockWeb/bin/Debug/net8.0
 /BestStoreMVC/.vs
 /BestStoreMVC/BestStoreMVC/bin/Debug/net8.0
 /BestStoreMVC/BestStoreMVC/Migrations
