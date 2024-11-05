@@ -14,21 +14,21 @@ namespace BestStoreMVC.Controllers
             this.context = context;
         }
 
-        public IActionResult Index(int pageIndex, string? search, string? brand, string? category, string? sort)
+        public IActionResult Index(int pageIndex, string? search, string? author, string? category, string? sort)
         {
             IQueryable<Product> query = context.Products;
 
             // search functionality
             if (search != null && search.Length > 0)
             {
-                query = query.Where(p => p.Name.Contains(search));
+                query = query.Where(p => p.Title.Contains(search));
             }
 
 
             // filter functionality
-            if (brand != null && brand.Length > 0)
+            if (author != null && author.Length > 0)
             {
-                query = query.Where(p => p.Brand.Contains(brand));
+                query = query.Where(p => p.Author.Contains(author));
             }
 
             if (category != null && category.Length > 0)
@@ -73,7 +73,7 @@ namespace BestStoreMVC.Controllers
             var storeSearchModel = new StoreSearchModel()
             {
                 Search = search,
-                Brand = brand,
+                Author = author,
                 Category = category,
                 Sort = sort
             };

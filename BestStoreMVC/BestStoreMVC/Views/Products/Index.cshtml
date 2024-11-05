@@ -30,7 +30,7 @@
     </div>
     <div class="col">
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" name="search" value="@search" placeholder="Search by Name or Brand" aria-label="Search">
+            <input class="form-control me-2" type="search" name="search" value="@search" placeholder="Search by Title or Author" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </div>
@@ -55,8 +55,8 @@
     <thead>
         <tr>
             <th style="cursor: pointer;" onclick="sortTable('Id')">ID @getArrow("Id")</th>
-            <th style="cursor: pointer;" onclick="sortTable('Name')">Name @getArrow("Name")</th>
-            <th style="cursor: pointer;" onclick="sortTable('Brand')">Brand @getArrow("Brand")</th>
+            <th style="cursor: pointer;" onclick="sortTable('Title')">Title @getArrow("Title")</th>
+            <th style="cursor: pointer;" onclick="sortTable('Author')">Author @getArrow("Author")</th>
             <th style="cursor: pointer;" onclick="sortTable('Category')">Category @getArrow("Category")</th>
             <th style="cursor: pointer;" onclick="sortTable('Price')">Price @getArrow("Price")</th>
             <th>Image</th>
@@ -70,8 +70,8 @@
         {
             <tr>
                 <td>@product.Id</td>
-                <td>@product.Name</td>
-                <td>@product.Brand</td>
+                <td>@product.Title</td>
+                <td>@product.Author</td>
                 <td>@product.Category</td>
                 <td>@(product.Price)$</td>
                 <td><img src="/products/@product.ImageFileName" width="100" /></td>
